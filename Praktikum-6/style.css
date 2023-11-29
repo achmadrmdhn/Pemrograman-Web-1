@@ -1,0 +1,121 @@
+* {
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #faeecd;
+}
+
+#header {
+    background-color: burlywood;
+    text-align: center;
+    padding: 10px;
+    }
+
+#header h1 {
+    color: blue;
+    }
+
+#header blockquote {
+background-color:#ffc219;
+}
+
+#navbar{
+    text-align:center;
+}
+
+#navbar ul {
+    list-style:none;
+    display:inline-flex;
+    margin: 50px;
+    font-size: 20px;
+    color: blue
+}
+
+#navbar a {
+    padding-left: 20px;
+}
+
+.gambar {
+    text-align:center;
+}
+
+.gambar img {
+    width:20%;
+}
+
+p {
+    text-align: justify;
+}
+
+#b {
+    font-size:3.5em;
+    color:blue;
+}
+
+#profil {
+    margin-top: 20px;
+}
+
+#berternak {
+    margin-top: 20px;
+}
+
+.profil li {
+    text-align:justify;
+}
+
+.koleksi {
+    text-align:center;
+}
+
+.koleksi img {
+    width:15%;
+    padding-left:10px;
+    margin-top: 20px;
+}
+
+.promo {
+    text-align:center;
+    background-color: burlywood;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+.promo ol {
+    display:inline-flex;
+    list-style:none;
+}
+
+.promo a {
+    padding-left:10px;
+}
+
+a {
+    text-decoration:none;
+    color: blue;
+}
+
+#bukalapak {
+    color:#ff475d;
+}
+
+#tokopedia {
+    color:green;
+}
+
+#shopee {
+    color:#fa8100;
+}
+
+#Wa {
+    color: blue;
+}
+
+#harga-asli {
+    color: gray;
+}
+
+#highlight {
+    color: blue;
+}
