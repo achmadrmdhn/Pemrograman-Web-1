@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Biaya Parkir | Achmad Rifa'i Ramadhan</title>
+    <link rel="shortcut icon" href="/Assets/pemweb.ico">
+    <!--Google Font-Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin-left: 30px;
+        }
+
+        button {
+            color: white;
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 20px;
+            font-weight: bold;
+        }
+
+        #hasil {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Menghitung Biaya Parkir</h1>
+    Jam Masuk : 
+    <input type="number" id="masuk" value="">
+    <br>
+    <br>
+    Jam Keluar :
+    <input type="number" id="keluar" value="">
+    <br>
+    <br>
+    <button onclick="hitung_biaya()">Hitung Biaya Parkir!</button>
+
+    <hr>
+    <h3>Biaya Parkir Yang Harus Di Bayar :</h3>
+    <span id="hasil"></span>
+</body>
+
+<script>
+
+    function hitung_biaya() {
+    const per2jam = 3000;
+    const perjam = 1000;
+
+    let masuk = document.getElementById("masuk").value;
+    let keluar = document.getElementById("keluar").value;
+    let selisih = keluar - masuk;
+    let biaya = 0;
+        biaya = per2jam;  
+
+    if(selisih <=2 ){
+    } 
+
+    else{
+        let jam_tambahan = selisih - 2;
+        biaya = per2jam + ( jam_tambahan * perjam);
+    }
+
+    let _hasil = document.getElementById("hasil");
+    _hasil.innerHTML = biaya;
+    }
+</script>
+</html>

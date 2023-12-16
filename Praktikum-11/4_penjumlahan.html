@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum Penjumlahan | Achmad Rifa'i Ramadhan</title>
+    <link rel="shortcut icon" href="/Assets/pemweb.ico">
+    <!--Google Font-Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin-left: 30px;
+        }
+
+        button {
+            color: white;
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 20px;
+            font-weight: bold;
+        }
+
+        #hasil {
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+    <h1>Program Penjumlahan</h1>
+    <input type="number" id="bil1" value="" placeholder="0">
+    <br>
+    <b>+</b>
+    <br>
+    <input type="number"id="bil2" value="" placeholder="0">
+    <br>
+    <hr>
+    <button onclick="hitung()">Hitung!</button>
+    <br>
+    <b>=</b>
+    <br>
+    <input type="number"id="hasil" disabled>
+    <br>
+    <br>
+
+</body>
+
+<script>
+    function hitung() {
+        let bilangan1 = Number(document.getElementById("bil1").value);
+        let bilangan2 = Number(document.getElementById("bil2").value);
+        console.log(typeof(bilangan1))
+        let hasil = bilangan1 + bilangan2;
+        document.getElementById ('hasil').value = hasil
+    }
+</script>
+</html>
