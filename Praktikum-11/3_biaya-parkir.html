@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Praktikum Biaya Parkir | Achmad Rifa'i Ramadhan</title>
-    <link rel="shortcut icon" href="/Assets/pemweb.ico">
+    <title>Praktikum Penjumlahan | Achmad Rifa'i Ramadhan</title>
+    <link rel="shortcut icon" href="Assets/pemweb.ico">
     <!--Google Font-Poppins  -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -26,6 +26,7 @@
             border-radius: 5px;
             padding: 5px 20px;
             font-weight: bold;
+            margin-top: 20px;
         }
 
         #hasil {
@@ -36,43 +37,38 @@
 </head>
 <body>
     <h1>Menghitung Biaya Parkir</h1>
-    Jam Masuk : 
-    <input type="number" id="masuk" value="">
+    <label for="jamMasuk">Jam Masuk : </label>
+    <input type="number" id="jamMasuk" placeholder="Masukkan Jam Masuk">
     <br>
-    <br>
-    Jam Keluar :
-    <input type="number" id="keluar" value="">
-    <br>
+    <label for="jamKeluar">Jam Keluar : </label>
+    <input type="number" id="jamKeluar" placeholder="Masukkan Jam Keluar">
     <br>
     <button onclick="hitung_biaya()">Hitung Biaya Parkir!</button>
+    <p id="hasil"></p>
 
-    <hr>
-    <h3>Biaya Parkir Yang Harus Di Bayar :</h3>
-    <span id="hasil"></span>
+    <script>
+        function hitung_biaya() {
+        const jamMasuk = parseInt(document.getElementById('jamMasuk').value);
+        const jamKeluar = parseInt(document.getElementById('jamKeluar').value);
+
+        // Validasi input
+        if (jamMasuk >= 0 && jamMasuk <= 23 && jamKeluar >= 0 && jamKeluar <= 23) {
+            const selisihJam = jamKeluar - jamMasuk;
+            let biaya = 0;
+
+            // Hitung biaya parkir
+            if (selisihJam <= 2) {
+                biaya = 3000;
+            } else {
+                biaya = 3000 + (selisihJam - 2) * 1000;
+            }
+
+            document.getElementById('hasil').innerText = `Biaya Parkir: ${biaya} Rupiah`;
+        } 
+        else {
+            document.getElementById('hasil').innerText = 'Silahkan Coba Kembali :';
+        }
+        }
+    </script>
 </body>
-
-<script>
-
-    function hitung_biaya() {
-    const per2jam = 3000;
-    const perjam = 1000;
-
-    let masuk = document.getElementById("masuk").value;
-    let keluar = document.getElementById("keluar").value;
-    let selisih = keluar - masuk;
-    let biaya = 0;
-        biaya = per2jam;  
-
-    if(selisih <=2 ){
-    } 
-
-    else{
-        let jam_tambahan = selisih - 2;
-        biaya = per2jam + ( jam_tambahan * perjam);
-    }
-
-    let _hasil = document.getElementById("hasil");
-    _hasil.innerHTML = biaya;
-    }
-</script>
 </html>
