@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Picker | Achmad Rifa'i Ramadhan</title>
+    <link rel="shortcut icon" href="asset/pemweb.ico">
+
+    <!--Google Font-Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            align-items: center;
+            margin-top: 30px;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+        select {
+            width: 200px;
+            margin: auto;
+        }
+
+        img {
+            margin: auto;
+        }
+    </style>
+
+</head>
+<body>
+    <h1>Image Picker</h1>
+    <select name="selectanimal" id="selectanimal">
+        <option hidden>Pilih Gambar</option>
+        <option value="jerapah">Jerapah</option>
+        <option value="kucing">Kucing</option>
+        <option value="orangutan">Orang Utan</option>
+        <option value="panda">Panda</option>
+        <option value="rusa">Rusa</option>
+        <option value="sapi">Sapi</option>
+    </select>
+    <br>
+    <br>
+    <img src="" alt="" id="image" style="width: 20%;">
+    <script>
+        let selectanimal = document.getElementById("selectanimal");
+        let image = document.getElementById("image");
+
+        selectanimal.onchange = function() {
+            if (selectanimal.value == "jerapah") {
+                alert("Anda memilih gambar Jerapah!");
+                image.src = "./asset/jerapah.jpeg";
+            }
+
+            else if (selectanimal.value == "kucing") {
+                image.src = "./asset/kucing.jpg";
+                alert("Anda memilih gambar Kucing!");
+            }
+
+            else if (selectanimal.value == "orangutan") {
+                image.src = "./asset/orangutan.jpg";
+                alert("Anda memilih gambar Orant Utan!");
+            }
+
+            else if (selectanimal.value == "panda") {
+                image.src = "./asset/panda.jpg";
+                alert("Anda memilih gambar Panda!");
+            }
+
+            else if (selectanimal.value == "rusa") {
+                image.src = "./asset/rusa.jpg";
+                alert("Anda memilih gambar Rusa!");
+            }
+
+            else if (selectanimal.value == "sapi") {
+                image.src = "./asset/sapi.jpg";
+                alert("Anda memilih gambar Sapi!");
+            }
+        }
+    </script>
+</body>
+</html>

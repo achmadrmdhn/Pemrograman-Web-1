@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Praktikum 12 - Kalkulator Multi Option | Achmad Rifa'i Ramadhan</title>
+    <!--Google Font-Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
+
+        body {
+            margin: 30px;
+        }
+
+        .headline {
+            margin-bottom: 10px;
+        }
+
+        input, select {
+            margin-left: 20px;
+        }
+
+        button {
+            color: white;
+            background-color: red;
+            border: 1px solid black;
+            border-radius: 5px;
+            padding: 5px 20px;
+            font-weight: bold;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+        #hasil {
+            font-weight: bold;
+        }
+
+    </style>
+</head>
+<body>
+    <h2 class="headline">Kalkulator Multi Option</h2>
+    <label for="value1">Bilangan 1</label>
+    <input type="number" id="value1">
+    <br>
+    <label for="value2">Bilangan 2</label>
+    <input type="number" id="value2">
+    <br>
+    <label for="operator">Pilih Operator</label>
+    <select name="" id="operator">
+        <option value="+">+</option>
+        <option value="-">-</option>
+        <option value="/">/</option>
+        <option value="*">*</option>
+    </select>
+    <br>
+    <button onclick="hitung()">Hitung</button>
+    <hr>
+    <br>
+    <h5 id="hasil">0</h5>
+    
+    <script>
+        function hitung() {
+            let bilangan1 = parseInt(document.getElementById('value1').value);
+            let bilangan2 = parseInt(document.getElementById('value2').value);
+            let operator = document.getElementById('operator').value;
+
+            // Pengecekan get elemen
+            console.log(typeof(bilangan1));
+            console.log(typeof(bilangan2));
+
+            console.log(operator);
+
+            let total = 0;
+            if (operator == "+") {
+                total = bilangan1 + bilangan2;
+            }
+            else if (operator == "-") {
+                total = bilangan1 - bilangan2;
+            }
+            else if (operator == "/") {
+                total = bilangan1 / bilangan2;
+            }
+            else if (operator == "*") {
+                total = bilangan1 * bilangan2;
+            }
+
+            let hasil = document.getElementById('hasil');
+            hasil.innerHTML = total;
+
+        }
+
+    </script>
+</body>
+</html>
