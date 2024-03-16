@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Login Authentication | Achmad Rifa'i Ramadhan</title>
+    <link rel="shortcut icon" href="asset/pemweb.ico" />
+
+    <!--Google Font-Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+      * {
+        font-family: "Poppins", sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        margin-top: 30px;
+        height: auto;
+      }
+
+      h1 {
+        margin-bottom: 20px;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+      }
+
+      #username {
+        margin-bottom: 20px;
+      }
+
+      input {
+        width: 100%;
+      }
+
+      label {
+        margin-right: 20px;
+        font-weight: bold;
+      }
+
+      button {
+        color: white;
+        background-color: red;
+        border: 1px solid black;
+        border-radius: 5px;
+        padding: 5px 20px;
+        margin-top: 20px;
+        font-weight: bold;
+      }
+    </style>
+  
+  </head>
+  <body>
+    <div class="container">
+      <h1>Login Now</h1>
+      <form action="./cta.html">
+        <div>
+          <label for="username">Username</label>
+          <input type="text" id="username" />
+        </div>
+        <div>
+          <label for="password">Password</label>
+          <input type="password" id="password" />
+        </div>
+        <button type="button" onclick="auth()">Login</button>
+      </form>
+    </div>
+
+    <script>
+      function auth() {
+        const username = "ahmad2017";
+        const password = "integrity";
+    
+        let userinput = document.getElementById("username").value;
+        let passwordinput = document.getElementById("password").value;
+    
+        if (username === userinput && password === passwordinput) {
+          alert("Login Berhasil");
+          document.location = "./cta.html";
+        }
+        else {
+          alert("Login Gagal");
+        }
+      }
+      
+      // fungsi agar enter bisa digunakan
+      document.addEventListener("DOMContentLoaded", function() {
+        document.addEventListener("keypress", function(e) {
+          if (e.key === "Enter") {
+            auth();
+          }
+        });
+      });
+    </script>
+    
+  </body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form Pemesanan Barang - Rifa'i</title>
+  </head>
+  <body>
+    <div>
+    <h2>
+      <nav align="center" style="width: 85%; border: 1px solid #000000; margin-left: 8%; margin-top: 2%">
+        <a style="text-decoration: none; font-family: sans-serif; color:#000000; margin-right: 50px" href="#">Home</a> |
+        <a style="text-decoration: none; font-family: sans-serif; color:#000000; margin-left: 20px; margin-right: 20px" href="#">Generate Link</a> |
+        <a style="text-decoration: none; font-family: sans-serif; color:#000000; margin-left: 25px; margin-right: 20px" href="#">Transaction History</a> |
+        <a style="text-decoration: none; font-family: sans-serif; color:#000000; margin-left: 30px; margin-right: 20px" href="#">Policy</a> |
+        <a style="text-decoration: none; font-family: sans-serif; color:#000000; margin-left: 35px;" href="#">Logout</a>
+      </nav>
+    </h2>
+    <br />
+    </div>
+    <div style="display: flex; margin-left: 135px; margin-top: 2%">
+      <form action="/client.php" method="POST" enctype="multipart/form-data">
+        <div style="width: 250px; height: 250px; border:1px solid #000000; background-color: #ffffff; margin-left: 8%; margin-top: 30px">
+        <img src="https://cdn.icon-icons.com/icons2/3214/PNG/512/cloud_file_upload_server_icon_196427.png" style="width: 200px; margin: 25px">
+        </div>
+        <div style="margin-left: 8%; margin-top: 20px">
+        <label>
+          <b style="font-family: sans-serif">Upload Your Picture</b>
+          <br />
+          <input type="file" style="margin-top: 5px; font-family: sans-serif">
+        </label>
+        </div>
+      </form>
+      <br />
+      <form action="cta_form.html">
+      <div style="flex-direction: column; margin-left: 100px; margin-top:2%">
+        <div>
+          <label style="display: inline-block; font-family: sans-serif; width: 200px">Title Here :</label>
+          <input type="text" placeholder="" style="width: 280px; padding: 5px; margin-bottom: 1%; border: 1px solid grey">
+        </div>
+        <div>
+          <label style="display: inline-block; font-family: sans-serif; width: 200px">Description :</label>
+          <textarea cols="30" rows="6" placeholder="" style="width: 280px; padding: 5px; border: 1px solid grey"></textarea>
+        </div>
+        <div>
+          <label style="display: inline-block; font-family: sans-serif; width: 200px">Account Number :</label>
+          <input type="text" placeholder="" style="width: 280px; padding: 5px; margin-bottom: 1%; border: 1px solid grey">
+        </div>
+        <div>
+          <label style="display: inline-block; font-family: sans-serif; width: 200px">Bank :</label>
+          <select style="width: 295px; padding: 5px; margin-bottom: 1%; border: 1px solid grey">
+            <option style="font-family: sans-serif">Choose Payment</option>
+            <option style="font-family: sans-serif">BCA</option>
+            <option style="font-family: sans-serif">Mandiri</option>
+            <option style="font-family: sans-serif">BNI</option>
+            <option style="font-family: sans-serif">BTN</option>
+          </select>
+        </div>
+        <div>
+          <label style="display: inline-block; font-family: sans-serif; width: 200px">Account Holder :</label>
+          <input type="text" placeholder="" style="width: 280px; padding: 5px; margin-bottom: 1%; border: 1px solid grey">
+        </div>
+        <div>
+          <label style="display: inline-block; font-family: sans-serif; width: 200px">Transaction :</label>
+          <input type="number" max="10" min="1" style="width: 35px; padding: 5px; border: 1px solid grey">
+          <br />
+          <p style="margin-left: 200px; font-family: sans-serif; font-size: small; color: black">* if the transaction is for 3 person, choose 3 from the drop-down list</p>
+          <input type="checkbox" id="pilihan 1" style="margin-left: 200px; color: #0bad3c">
+          <label for="pilihan 1" style="font-family: sans-serif; color: #0bad3c">Send to Mobile Phone</label>
+          <br />
+          <input type="checkbox" id="pilihan 2" style="margin-left: 200px; color: #0bad3c">
+          <label for="pilihan 2" style="font-family: sans-serif; color: #0bad3c">Send to Email</label>
+        </div>
+        <div>
+          <label style="display: inline-block; width: 200px; font-family: sans-serif">Send to Mobile Phone :</label>
+          <input type="type" style="width: 280px; padding: 5px; margin-bottom: 1%; margin-top: 1%; border: 1px solid grey" />
+        </div>
+        <div>
+          <label style="display: inline-block; width: 200px; font-family: sans-serif">Send to Email :</label>
+          <input type="email" style="width: 280px; padding: 5px; border: 1px solid grey" />
+        </div>
+        <div>
+          <br />
+          <button type="submit" style="margin-left: 205px; font-family: sans-serif; color:#ffffff; border: 1px solid #000000; background-color: #0bad3c">Generate Navbr Link</button>
+        </div>
+      </div>
+    </div>
+  </form>
+  </body>
+</html>

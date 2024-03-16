@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pemesanan Pizza</title>
+</head>
+<body>
+    <h1>Black Goose Bistro | Pizza-on-Demand</h1>
+    <p>Our 12" wood-fired pizzas are avalaibe for delivery. Build your custom pizza and we'll deliver it within and hour</p>
+    <hr/>
+    <form action="cta.html">
+    <h3>Your Information</h3>
+    <label>Name :</label>
+    <input type="text">
+    <br/>
+    <br/>
+    <label>Address :</label>
+    <textarea cols="19" rows="5"></textarea>
+    <br/>
+    <br/>
+    <label>Telephone Number :</label>
+    <input type="number">
+    <br/>
+    <br/>
+    <label>Email :</label>
+    <input type="email">
+    <br/>
+    <br/>
+    <label>Delivery Instruction :</label>
+    <br/>
+    <textarea cols="50" rows="5"></textarea>
+    <fieldset>
+        <h4>Pilih Salah Satu :</h4>
+        <ul style="list-style-type:none;">
+            <li>
+                <input type="radio" name="Rasa" id="pilih 1">
+                <label for="pilih 1"> Original </label>
+            </li>
+            <li>
+                <input type="radio" name="Rasa" id="pilih 2">
+                <label for="pilih 2"> Keju Mozarella </label>
+            </li>
+            <li>
+                <input type="radio" name="Rasa" id="pilih 3">
+                <label for="pilih 3"> Barbeque </label>
+            </li>
+            <li>
+                <input type="radio" name="Rasa" id="pilih 4">
+                <label for="pilih 4"> Rendang </label>
+            </li>
+            <li>
+                <input type="radio" name="Rasa" id="pilih 5">
+                <label for="pilih 5"> Daging Unta </label>
+            </li>
+        </ul>
+        <h4>Topping</h4>
+        <ul style="list-style-type:none;">
+            <li>
+                <input type="checkbox" id="Jamur">
+                <label for="Jamur">Jamur</label>
+            </li>
+            <li>
+                <input type="checkbox" id="Sosis">
+                <label for="Sosis">Sosis</label>
+            </li>
+            <li>
+                <input type="checkbox" id="Sayuran">
+                <label for="Sayuran">Sayuran</label>
+            </li>
+            <li>
+                <input type="checkbox" id="Boba">
+                <label for="Boba">Boba</label>
+            </li>
+            <li>
+                <input type="checkbox" id="Makaroni">
+                <label for="Makaroni">Makaroni</label>
+            </li>
+        </ul>
+        <label>Jumlah Pesanan :</label>
+        <input type="number">
+        <br/>
+        <button type="Submit">Submit</button>
+        <button type="Reset">Reset</button>
+    </fieldset>
+    </form>
+</body>
+</html>

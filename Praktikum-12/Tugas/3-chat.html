@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat Message | Achmad Rifa'i Ramadhan</title>
+    <link rel="shortcut icon" href="asset/pemweb.ico">
+
+    <!--Google Font-Poppins  -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet" />
+
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            flex-direction: column ;
+            justify-content: center;
+            margin-top: 30px;
+            height: auto;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .main {
+            width: 500px;
+            background-color: #fff;
+            border: .5px solid #000;
+            border-radius: 5px;
+            padding: 20px;
+            margin: auto;
+        }
+
+        .boxchat {
+            width: 100%;
+            height: 40vh;
+            padding: 5px;
+            margin-bottom: 10px;
+            overflow: scroll;
+            scroll-behavior: smooth;
+            box-sizing: border-box;
+        }
+
+        .tulischat {
+            width: 75%;
+            height: 30px;
+            border: .5px solid black;
+            border-radius: 5px;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+
+        .button {
+            color: white;
+            background-color: red;
+            border: .5px solid black;
+            border-radius: 5px;
+            padding: 5px 20px;
+            font-weight: bold;
+            width: 20%;
+            height: 30px;
+            float: right;
+        }
+        </style>
+
+    </head>
+    <body>
+    <h1>Chat Box</h1>
+    <div class="main">
+        <div class="boxchat" id="boxchat"></div>
+        <input type="text" class="tulischat" id="tulischat">
+        <button class="button" onclick="kirimPesan()">KIRIM</button>
+    </div>
+
+    <script type="text/javascript">
+        let terima = document.getElementById("tulischat");
+        let kirim = document.getElementById("boxchat");
+
+        function kirimPesan() {
+            if (terima.value.trim() !== '') {
+                kirim.innerHTML += `${terima.value} <br>`;
+                scrollToBottom("boxchat");
+                terima.value = "";
+            }
+        }
+
+        // fungsi agar enter bisa digunakan
+        function handleKeyPress(event) {
+            if (event.key === 'Enter') {
+                kirimPesan();
+            }
+        }
+
+        terima.addEventListener('keypress', handleKeyPress);
+
+        function scrollToBottom(id) {
+            let div = document.getElementById(id);
+            div.scrollTop = div.scrollHeight - div.clientHeight;
+        }
+    </script>
+</body>
+</html>
